@@ -1,0 +1,47 @@
+.tree-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(200,223,208,.5);
+  transition: var(--trans);
+  cursor: pointer;
+}
+.tree-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--sage);
+}
+
+.tree-card-img {
+  width: 100%;
+  height: 180px;
+  background: var(--mist);
+  overflow: hidden;
+  position: relative;
+}
+.tree-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.tree-card:hover .tree-card-img img { transform: scale(1.05); }
+.tree-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: linear-gradient(135deg, var(--mist), var(--parchment));
+}
+
+.tree-card-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.tree-card-id { font-size: 11px; font-weight: 600; color: var(--sage); letter-spacing: .08em; font-family: 'DM Mono', monospace; }
+.tree-card-name { font-size: 17px; font-weight: 600; color: var(--forest); font-family: 'Playfair Display', serif; }
+.tree-card-botanical { font-size: 13px; color: var(--stone); font-style: italic; }
+.tree-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+.tree-card-area { font-size: 12px; color: var(--stone); }

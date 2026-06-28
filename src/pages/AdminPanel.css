@@ -1,0 +1,66 @@
+.admin { max-width: 1300px; margin: 0 auto; padding: 32px 24px 80px; }
+
+.admin-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; }
+.admin-header h1 { font-size: 28px; color: var(--forest); }
+.admin-header p  { font-size: 13px; color: var(--stone); margin-top: 4px; }
+
+.btn-add {
+  padding: 11px 24px; background: var(--forest); color: var(--white);
+  border-radius: var(--radius); font-size: 14px; font-weight: 600; transition: var(--trans);
+}
+.btn-add:hover { background: var(--canopy); }
+
+.admin-msg { padding: 12px 16px; border-radius: var(--radius); font-size: 14px; margin-bottom: 20px; }
+.admin-msg.success { background: #e6f4ea; color: #1e6b2e; }
+.admin-msg.error   { background: #fdecea; color: var(--error); }
+
+/* Form */
+.admin-form-wrap { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--mist); margin-bottom: 32px; overflow: hidden; }
+.admin-form-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; background: var(--parchment); border-bottom: 1px solid var(--mist); }
+.admin-form-header h2 { font-size: 18px; color: var(--forest); }
+.admin-form-header button { background: none; color: var(--stone); font-size: 14px; }
+
+.admin-form { padding: 24px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 5px; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-size: 13px; font-weight: 600; color: var(--forest); }
+.form-field input, .form-field textarea {
+  padding: 10px 13px; border: 1.5px solid var(--mist); border-radius: var(--radius);
+  font-size: 14px; color: var(--charcoal); transition: var(--trans); resize: vertical;
+}
+.form-field input:focus, .form-field textarea:focus { border-color: var(--leaf); box-shadow: 0 0 0 3px rgba(74,140,92,.1); }
+
+.form-actions { display: flex; gap: 12px; margin-top: 20px; }
+.btn-save { padding: 11px 28px; background: var(--forest); color: var(--white); border-radius: var(--radius); font-weight: 600; transition: var(--trans); }
+.btn-save:hover:not(:disabled) { background: var(--canopy); }
+.btn-save:disabled { opacity: .6; cursor: not-allowed; }
+.btn-cancel { padding: 11px 20px; background: var(--parchment); color: var(--stone); border-radius: var(--radius); font-weight: 500; border: 1px solid var(--mist); transition: var(--trans); }
+.btn-cancel:hover { background: var(--mist); }
+
+/* Table */
+.admin-table-wrap { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--mist); overflow: hidden; }
+.table-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid var(--mist); }
+.table-toolbar h2 { font-size: 17px; color: var(--forest); }
+.table-search { padding: 8px 14px; border: 1.5px solid var(--mist); border-radius: var(--radius); font-size: 14px; width: 240px; transition: var(--trans); }
+.table-search:focus { border-color: var(--leaf); }
+
+.table-scroll { overflow-x: auto; }
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table th { padding: 12px 16px; text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); background: var(--parchment); border-bottom: 1px solid var(--mist); }
+.admin-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid rgba(200,223,208,.3); vertical-align: middle; }
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: var(--cream); }
+.mono   { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--sage); }
+.italic { font-style: italic; color: var(--stone); }
+
+.table-actions { display: flex; gap: 8px; }
+.btn-edit { padding: 5px 14px; border-radius: 6px; background: var(--mist); color: var(--forest); font-size: 13px; font-weight: 600; transition: var(--trans); }
+.btn-edit:hover { background: var(--sage); color: var(--white); }
+.btn-del  { padding: 5px 14px; border-radius: 6px; background: #fdecea; color: var(--error); font-size: 13px; font-weight: 600; transition: var(--trans); }
+.btn-del:hover  { background: var(--error); color: var(--white); }
+
+@media (max-width: 768px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .admin-header { flex-direction: column; gap: 16px; }
+}

@@ -1,0 +1,159 @@
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 24px 60px;
+}
+.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: .08;
+  background: var(--leaf);
+}
+.hero-circle.c1 { width: 600px; height: 600px; top: -200px; right: -150px; }
+.hero-circle.c2 { width: 400px; height: 400px; bottom: -100px; left: -100px; background: var(--gold); opacity: .05; }
+.hero-circle.c3 { width: 200px; height: 200px; top: 30%; left: 10%; }
+
+.hero-content {
+  position: relative;
+  max-width: 680px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--leaf);
+  padding: 5px 16px;
+  border: 1px solid var(--mist);
+  border-radius: 20px;
+  background: rgba(122,184,147,.08);
+}
+.hero-title {
+  font-size: clamp(40px, 7vw, 72px);
+  color: var(--forest);
+  font-weight: 700;
+}
+.hero-title em { color: var(--leaf); }
+.hero-sub { font-size: 17px; color: var(--stone); max-width: 480px; line-height: 1.7; }
+.hero-search { width: 100%; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+.btn-primary {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: var(--forest);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--trans);
+  border: none;
+}
+.btn-primary:hover { background: var(--canopy); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-ghost {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: transparent;
+  color: var(--forest);
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid var(--forest);
+  transition: var(--trans);
+}
+.btn-ghost:hover { background: var(--forest); color: var(--white); }
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--forest);
+  padding: 32px 40px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; padding: 0 40px; }
+.stat-number { display: block; font-family: 'Playfair Display', serif; font-size: 36px; color: var(--white); font-weight: 700; }
+.stat-label { font-size: 12px; color: var(--sage); text-transform: uppercase; letter-spacing: .1em; font-weight: 500; }
+.stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,.15); }
+
+/* Sections */
+.home-section { padding: 64px 40px; max-width: 1200px; margin: 0 auto; }
+.alt-bg { background: var(--parchment); max-width: unset; }
+.alt-bg > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px; }
+.section-head h2 { font-size: 28px; color: var(--forest); }
+.link-btn { background: none; border: none; color: var(--leaf); font-size: 14px; font-weight: 600; transition: var(--trans); }
+.link-btn:hover { color: var(--forest); }
+
+/* Area chips */
+.area-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.area-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: var(--white);
+  border: 1.5px solid var(--mist);
+  cursor: pointer;
+  transition: var(--trans);
+}
+.area-chip:hover { border-color: var(--leaf); background: rgba(74,140,92,.05); transform: translateY(-1px); }
+.area-name { font-size: 14px; font-weight: 500; color: var(--forest); }
+.area-count { font-size: 12px; color: var(--white); background: var(--leaf); border-radius: 50px; padding: 2px 8px; font-weight: 600; }
+
+/* Species list */
+.species-list { display: flex; flex-direction: column; gap: 2px; max-width: 800px; }
+.species-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--trans);
+  text-align: left;
+}
+.species-row:hover { border-color: var(--mist); box-shadow: var(--shadow-sm); transform: translateX(4px); }
+.species-rank { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--stone); opacity: .5; min-width: 24px; }
+.species-names { flex: 1; }
+.species-common { display: block; font-size: 15px; font-weight: 600; color: var(--forest); }
+.species-botanical { display: block; font-size: 12px; color: var(--stone); font-style: italic; }
+.species-count-pill { font-size: 12px; background: var(--mist); color: var(--canopy); padding: 3px 10px; border-radius: 20px; font-weight: 600; white-space: nowrap; }
+
+/* CTA */
+.home-cta {
+  background: linear-gradient(135deg, var(--canopy), var(--forest));
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.home-cta h2 { font-size: 32px; color: var(--white); }
+.home-cta p  { color: var(--mist); font-size: 16px; }
+.home-cta .btn-primary { background: var(--white); color: var(--forest); }
+.home-cta .btn-primary:hover { background: var(--mist); }
+
+@media (max-width: 768px) {
+  .hero { min-height: 80vh; padding: 60px 20px; }
+  .stats-bar { padding: 24px 20px; gap: 16px; }
+  .stat-item { padding: 0 20px; }
+  .stat-divider { display: none; }
+  .home-section { padding: 48px 20px; }
+}
